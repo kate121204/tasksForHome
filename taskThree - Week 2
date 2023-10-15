@@ -1,0 +1,34 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int main()
+{
+    double n, currentNums;
+    int min = INT_MAX;
+    int max = INT_MIN;
+
+    double sum = 0;
+
+    std::cin >> n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        std::cin >> currentNums;
+        sum += currentNums;
+
+        if(currentNums < min)
+        {
+          min = currentNums;
+        }
+        else if (currentNums > max)
+        {
+          max = currentNums;
+        }
+    }
+    
+        std::cout << "Min = " << min << "\n";
+        std::cout << "Max = " <<  max << "\n";
+        std::cout << "Avrg = " << sum/n << "\n";
+    return 0;
+}
