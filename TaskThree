@@ -6,30 +6,27 @@ int main() {
 char operation;
 double a,b;
 
-std::cin >> operation;
-std::cin >> a >> b;
+while (operation != '/' && b != 0){
+   std::cin >> operation;
+   std::cin >> a >> b;
 
-switch (operation){
-    case '+':
-    std::cout << "= ";
-    std::cout << a + b;
-    break;
-    case '-':
-    std::cout << "= ";
-    std::cout << a - b;
-    break;
-    case '*':
-    std::cout << "= ";
-    std::cout << a * b;
-    break;
-    default:
-    if(b == 0){
-        break;
-    }
-    std::cout << "= ";
-    std::cout << a / b ;
-    break;
+   switch (operation){
+     case '+':
+      std::cout << "= ";
+      std::cout << a + b;
+     break;
+     case '-':
+      std::cout << "= ";
+      std::cout << a - b;
+     break;
+     case '*':
+      std::cout << "= ";
+      std::cout << a * b;
+     break;
+     case '/':
+      std::cout << "= ";
+      std::cout << a / b;
+     break;
+   }
  }
 }
-
- 
